@@ -38,7 +38,6 @@ public class CarController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Car> updateCar(@PathVariable Long id, @RequestBody Car car) {
-        car.setId(id);
         Car updatedCar = carService.updateCar(car);
         return ResponseEntity.ok(updatedCar);
     }
