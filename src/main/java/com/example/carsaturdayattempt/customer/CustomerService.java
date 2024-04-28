@@ -1,4 +1,4 @@
-package Customer;
+package com.example.carsaturdayattempt.customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,25 +43,25 @@ public class CustomerService {
 
     private void validateCustomer(Customer customer) {
         if (!StringUtils.hasText(customer.getName())) {
-            throw new RuntimeException("Name cannot be empty or null");
+            throw new IllegalArgumentException("Name cannot be empty or null");
         }
         if (!StringUtils.hasText(customer.getStreet())) {
-            throw new RuntimeException("Street cannot be empty or null");
+            throw new IllegalArgumentException("Street cannot be empty or null");
         }
         if (!StringUtils.hasText(customer.getHouseNumber())) {
-            throw new RuntimeException("Street cannot be empty or null");
+            throw new IllegalArgumentException("Street cannot be empty or null");
         }
         if (!StringUtils.hasText(customer.getZipcode())) {
-            throw new RuntimeException("Zipcode cannot be empty or null");
+            throw new IllegalArgumentException("Zipcode cannot be empty or null");
         }
         if (!StringUtils.hasText(customer.getCity())) {
-            throw new RuntimeException("City cannot be empty or null");
+            throw new IllegalArgumentException("City cannot be empty or null");
         }
         if (!isValidEmail(customer.getEmail())) {
-            throw new RuntimeException("Invalid email address");
+            throw new IllegalArgumentException("Invalid email address");
         }
         if (!isValidPhoneNumber(customer.getPhoneNumber())) {
-            throw new RuntimeException("Invalid phone number");
+            throw new IllegalArgumentException("Invalid phone number");
         }
     }
 
