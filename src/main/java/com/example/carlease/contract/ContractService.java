@@ -11,7 +11,8 @@ import java.util.Optional;
 @Service
 public class ContractService {
     private final ContractRepository contractRepository;
-
+    //TODO: get Car info from CarService, Customer info from Customer Service and a LeaseRate from the LeaseRateCalculator
+    //TODO:create unit tests
     @Autowired
     public ContractService(ContractRepository contractRepository, CustomerService customerService) {
         this.contractRepository = contractRepository;

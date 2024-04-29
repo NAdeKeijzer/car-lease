@@ -19,7 +19,7 @@ public class LeaseControllerTest {
     }
 
     @Test
-    public void testCreateCustomer() {
+    public void testCreateLeaseRate() {
         LeaseRateRequest request = new LeaseRateRequest(66000, 36, 3.5, 55000);
 
         ResponseEntity<Double> response = leaseRateController.calculateLeaseRate(request);
